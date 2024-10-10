@@ -29,12 +29,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        installSplashScreen().apply {
-            setKeepOnScreenCondition {
-                viewModel.splashState.value.isLoading
-            }
-        }
-
         setContent {
             KubotTheme {
                 val nav = rememberNavController()
